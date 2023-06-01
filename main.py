@@ -15,11 +15,28 @@ pygame.display.set_caption("N-Body Simulation")
 sw2 = SCREEN_WIDTH / 2
 sh2 = SCREEN_HEIGHT / 2
 
-# mass: 0, name: 1, pos: 2, color: 3, raduis: 4
+# mass: 0, name: 1, pos: 2, color: 3, radius: 4
 sun = [10000, "sun", [sw2, sh2], (255, 0, 0), 10]
 earth = [100, "earth", [sw2 + 100, sh2], (0, 255, 0), 5]
 
 planets = [sun, earth]
+
+
+#def vector_add(v1, v2):
+   # v1 = []
+   # v2 = []
+   # return vector_add()
+
+
+def add_vectors(x,y,z):
+    x = sw2
+    y = sh2
+    z = 50
+    return add_vectors()
+
+
+vectors_added = add_vectors(x) * add_vectors(y) * add_vectors(z)
+#vectors_added = add_vectors(0) * add_vectors(1) * add_vectors(2)
 
 
 def update_simulation():
@@ -42,9 +59,9 @@ while should_be_running:
         if event.type == pygame.QUIT:
             should_be_running = False
 
-    # clear -> draw -> swap buffer
-    window.fill((0, 0, 0))
-    update_simulation()
-    render_frame()
-    pygame.display.flip()
-    sleep(1 / 60)
+# clear -> draw -> swap buffer
+window.fill((0, 0, 0))
+update_simulation()
+render_frame()
+pygame.display.flip()
+sleep(1 / 60)
